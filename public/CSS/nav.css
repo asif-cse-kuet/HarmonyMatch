@@ -1,0 +1,41 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, div {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100vw;
+        background-color: #ffd5d5;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Franklin Gothic', Arial, sans-serif;
+        font-size: larger;
+    }
+
+    .logo {
+        padding: 10px;
+        padding-left: 7%;
+        float: left;
+    }
+
+    .options {
+        padding: 10px;
+        float: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .options a {
+        float: center;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 1vw;
+    }
+
+    .log {
+        padding: 10px;
+        padding-right: 7%;
+        float: right;
+    }
