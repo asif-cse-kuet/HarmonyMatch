@@ -47,6 +47,8 @@ Route::get('/dashboard', function () {
 Route::get('/products', [ProductController::class, 'showProducts'])->name('products.index');
 Route::get('/products/search', [ProductController::class, 'showProducts'])->name('products.search');
 
+Route::get('/search', [ProfileController::class, 'showProfile'])->name('profiles.search');
+
 
 
 Route::middleware('auth')->group(function () {

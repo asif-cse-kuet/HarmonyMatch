@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -35,6 +36,29 @@ class ProfileController extends Controller
         $request->user()->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
+    }
+
+    public function showProfile(Request $request)
+    {
+
+        $gender = $request->input('gender');
+        $marital_status = $request->input('marital_status');
+        $divisions = $request->input('divisions');
+        $profiles = User::query();
+
+        if ($gender) {
+            $profiles->where('gender', $gender);
+        }
+        if ($marital_status) {
+            $profiles->where('marital_status', $marital_status);
+        }
+
+        if ($divisions) {
+            $profiles->where('division', $divisions);
+        }
+
+        $profileDetails = $profiles->get();
+        return view('welcome', ['profiles' => $profileDetails]);
     }
 
     /**

@@ -7,6 +7,7 @@
     <title>Harmony Match</title>
     <link rel="stylesheet" href="{{ asset('CSS/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('CSS/Home/body.css') }}">
+    <link rel="stylesheet" href="{{ asset('CSS/Search/search.css') }}">
     <link rel="stylesheet" href="{{ asset('CSS/footer.css') }}">
 </head>
 

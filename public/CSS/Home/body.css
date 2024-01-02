@@ -14,8 +14,10 @@
 }
 
 .body-part {
-    margin-left: 7%;
-    margin-right: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .center-text {
@@ -46,7 +48,7 @@
 .boxhadid {
     display: flex;
     justify-content: center;
-    align-content: center;
+    width: 100%;
 }
 
 .hadidref{
@@ -59,8 +61,7 @@
 }
 
 .custom-box {
-    width: 50%;
-    /* Adjust width as needed */
+    width: 65%;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
@@ -70,7 +71,6 @@
     border-radius: 10px;
     /* Rounded corners */
     background-color: rgba(255, 255, 255, 0.292);
-    /* 50% transparent black background */
 }
 
 .hadid {
@@ -83,34 +83,27 @@
 }
 
 
-.search-container{
+.search-container {
     display: flex;
-    padding: 5%;
+    width: 80vw;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 50px;
     flex-wrap: wrap;
-    border:#000;
-    justify-content: center;
-    text-align: center;
     flex-direction: row;
+    background: white;
+    border: 3px solid #b0d6d099;
+    justify-content: space-around;
+    border-radius: 10px;
 }
 
-.search-box{
-    width: 100vw;
-    height: auto;
-    padding:3%;
-    padding-bottom: 5%;
-    border: 1px solid rgb(7, 0, 0);
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 2px solid black;
-}
-
-.search-item{
+.search-item {
     border-radius: 20px;
-    float: left;
-    width: stretch;
-    margin-left: 5%;
-    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
 
 .search-item select{
     padding: 10px;
@@ -128,9 +121,11 @@
     }
 } */
 
-.label-search{
-    padding: 10px;
+.label-search {
+    padding-top: 10px;
+    padding-left: 4px;
 }
+
 
 .opt{
         padding: 10px 20px; /* Adjust padding as needed */

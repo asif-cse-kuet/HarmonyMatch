@@ -9,14 +9,19 @@ class ProductController extends Controller
 {
     public function showProducts(Request $request)
     {
-        $selectedOption = $request->input('selectedOption');
+        $selectedOption = $request->input('category');
+        $id = $request->input('id');
+
+        $products = Product::query();
 
         if ($selectedOption) {
-            $products = Product::where('category', $selectedOption)->get();
-        } else {
-            $products = Product::all(); // Fetch all products if no option is selected
+            $products->where('category', $selectedOption);
+        }
+        if ($id) {
+            $products->where('id', $id);
         }
 
-        return view('welcome', ['products' => $products]);
+        $productsDetails = $products->get();
+        return view('welcome', ['products' => $productsDetails]);
     }
 }
