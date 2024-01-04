@@ -17,7 +17,7 @@
     border: 1px solid rgb(2, 75, 78);
     box-shadow: 1px 3px 2px 1px rgb(0, 40, 54);
     width: 16vw;
-    height: 30vw;
+    height: max-content;
     border-radius: 8px;
     background: #ffffff54;
     display: flex;
@@ -25,15 +25,18 @@
     flex-direction: column;
 }
 
-.profile-upper{
-    background-color: blue; 
-    display:flex; 
-    flex-direction:column; 
-    border-radius:2px; 
-    padding:2px; 
-    justify-content:center; 
-    text-align:center;
+.profile-upper {
+    height: 55%;
+    background-color: #bdbdff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 2px;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
+
 .profile-upper>div>img{
     border-radius: 50%;
     border: 3px solid rgb(255, 255, 255);
@@ -41,23 +44,54 @@
     background: white;
 }
 
-.profile-lower{
-    background-color: white; 
-    display:flex; 
-    flex-direction:column; 
-    border-radius:2px; 
-    padding:5px; 
-    justify-content:center; 
-    text-align:center;
+.profile-lower {
+    height: 25%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
+
+.profile_detais {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.btn_profile {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #218dff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 
 .profile-item{
     padding:5px;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (min-width:500px) and (max-width:800px) {
     .profile{
-        width: 25vw;
-        height:50vw;
+        width: 30%;
+        height:fit-content;
+    }
+}
+
+@media screen and (max-width:499px) {
+    .profile{
+        width: 80%;
+        height:fit-content;
     }
 }

@@ -3,23 +3,23 @@
         @csrf
 
         <!-- Name -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" style="width: 100%;" />
             <x-input-error :messages="$errors->get('name')" />
         </div>
 
         <!-- Email Address -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" type="email" name="email" :value="old('email')" required autocomplete="username" style="width: 100%;" />
             <x-input-error :messages="$errors->get('email')" />
         </div>
 
         <!-- Divisions -->
-        <div>
-            <label for="division">Division</label>
-            <select name="division" id="division">
+        <div class="mt-4 block font-medium text-sm text-gray-700">
+            <label for="division">Division</label><br>
+            <select name="division" id="division" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" style="width: 100%;">
                 <option value="dhaka">Dhaka</option>
                 <option value="chittagong">Chittagong</option>
                 <option value="rajshahi">Rajshahi</option>
@@ -31,9 +31,9 @@
         </div>
 
         <!-- Marital Status -->
-        <div>
-            <label for="marital_status">Marital Status</label>
-            <select name="marital_status" id="marital_status">
+        <div class="mt-4 block font-medium text-sm text-gray-700">
+            <label for="marital_status">Marital Status</label><br>
+            <select name="marital_status" id="marital_status" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" style="width: 100%;">
                 <option value="unmarried"> Unmarried </option>
                 <option value="married"> Married </option>
                 <option value="divorced"> Divorced </option>
@@ -43,9 +43,9 @@
         </div>
 
         <!-- Gender -->
-        <div>
-            <label for="gender">Gender</label>
-            <select name="gender" id="gender">
+        <div class="mt-4 block font-medium text-sm text-gray-700">
+            <label for="gender">Gender</label><br>
+            <select name="gender" id="gender" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" style="width: 100%;">
                 <option value="male"> Male </option>
                 <option value="female"> Female </option>
                 <option value="others"> Others </option>
@@ -55,7 +55,7 @@
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" type="password" name="password" required autocomplete="new-password" />
+            <x-text-input id="password" type="password" name="password" required autocomplete="new-password" style="width: 100%;" />
             <x-input-error :messages="$errors->get('password')" />
         </div>
 
@@ -63,11 +63,11 @@
         <!-- Confirm Password -->
         <div class="mt-4">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <x-text-input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" style="width: 100%;" />
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div>
+        <div class="mt-4">
             <a href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>

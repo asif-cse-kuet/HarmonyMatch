@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,13 +43,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-
-
-Route::get('/products', [ProductController::class, 'showProducts'])->name('products.index');
-Route::get('/products/search', [ProductController::class, 'showProducts'])->name('products.search');
-
 Route::get('/search', [ProfileController::class, 'showProfile'])->name('profiles.search');
 
+Route::get('/search/active', [ProfileController::class, 'showProfileActive'])->name('profiles_active.search');
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 
 
 Route::middleware('auth')->group(function () {

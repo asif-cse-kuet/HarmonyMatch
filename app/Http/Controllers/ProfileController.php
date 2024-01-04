@@ -61,6 +61,30 @@ class ProfileController extends Controller
         return view('welcome', ['profiles' => $profileDetails]);
     }
 
+    // Show profiles on dashboard
+    public function showProfileActive(Request $request)
+    {
+        $gender = $request->input('gender');
+        $marital_status = $request->input('marital_status');
+        $divisions = $request->input('divisions');
+        $profiles = User::query();
+
+        if ($gender) {
+            $profiles->where('gender', $gender);
+        }
+        if ($marital_status) {
+            $profiles->where('marital_status', $marital_status);
+        }
+
+        if ($divisions) {
+            $profiles->where('division', $divisions);
+        }
+
+        $profileDetails = $profiles->get();
+        return view('dashboard', ['profiles' => $profileDetails]);
+    }
+
+
     /**
      * Delete the user's account.
      */

@@ -22,14 +22,14 @@
         </div>
 
         <!-- Remember Me -->
-        <div>
+        <div class="mt-4">
             <label for="remember_me">
                 <input id="remember_me" type="checkbox" name="remember">
                 <span>{{ __('Remember me') }}</span>
             </label>
         </div>
 
-        <div>
+        <div class="mt-4">
             @if (Route::has('password.request'))
             <a href="{{ route('password.request') }}">
                 {{ __('Forgot your password?') }}

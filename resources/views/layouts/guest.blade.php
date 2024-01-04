@@ -24,6 +24,7 @@
     <!-- header -->
     <div>
         @include('../Common/header')
+        <hr>
     </div>
 
     <!-- body -->

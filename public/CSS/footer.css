@@ -5,11 +5,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
 }
 .footer div{
+    box-sizing: border-box;
     text-align: center;
-    padding: 15px;
-    margin: 10%;
+    padding: 10px;
+    margin: 8%;
+    margin-left: 0;
+    margin-right: 0;
     width: 80%;
 }
 .footer div>a{

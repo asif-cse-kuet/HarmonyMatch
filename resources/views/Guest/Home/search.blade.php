@@ -2,7 +2,7 @@
 
     @isset($profiles)
     @if (count($profiles) > 0)
-    <h1>Profiless that matches to your search: </h1>
+    <h1 class="profile_container">Profiles that matches to your search: </h1>
     <div class="profile_container">
         @foreach ($profiles as $profile)
         <div class="profile">
@@ -25,6 +25,9 @@
             <div class="profile-lower">
                 <p class="profile-item">Email: {{ $profile->email }}</p>
                 <p class="profile-item">Price: {{ $profile->martital_status }}</p>
+            </div>
+            <div class="profile_detais">
+                <button class="btn_profile">Details</button>
             </div>
         </div>
         @endforeach
