@@ -38,6 +38,7 @@
                                 <select name="divisions" id="divisions">
                                     <option value="" class="opt"> সকল </option>
                                     <option value="dhaka" class="opt"> Dhaka (ঢাকা) </option>
+                                    <option value="mymensingh" class="opt"> Mymensingh (ময়মনসিংহ) </option>
                                     <option value="chittagong" class="opt"> Chittagong (চট্টগ্রাম) </option>
                                     <option value="khulna" class="opt"> Khulna (খুলনা) </option>
                                     <option value="rajshahi" class="opt"> Rajshahi (রাজশাহী) </option>

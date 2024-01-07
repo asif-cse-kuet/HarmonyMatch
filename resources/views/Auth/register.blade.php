@@ -21,6 +21,7 @@
             <label for="division">Division</label><br>
             <select name="division" id="division" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" style="width: 100%;">
                 <option value="dhaka">Dhaka</option>
+                <option value="mymensingh"> Mymensingh </option>
                 <option value="chittagong">Chittagong</option>
                 <option value="rajshahi">Rajshahi</option>
                 <option value="khulna">Khulna</option>

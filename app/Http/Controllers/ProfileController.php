@@ -7,6 +7,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use App\Models\User;
 
@@ -27,6 +29,13 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
+        $request->user()->gender = (string) $request->input('gender');
+        $request->user()->marital_status = (string) $request->input('marital_status');
+        $request->user()->division = (string) $request->input('division');
+        $request->user()->contact = (int) $request->input('contact');
+        $request->user()->father_name = (string) $request->input('father_name');
+        $request->user()->mother_name = (string) $request->input('mother_name');
+        $request->user()->siblings = (string) $request->input('siblings');
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
@@ -104,5 +113,15 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    public function profileDetails(Request $request)
+    {
+        $id = $request->input('profileId');
+        $id = (int) $id;
+
+        $profiles = User::find($id);
+
+        return view('profile.profile_details', ['profiles' => $profiles]);
     }
 }

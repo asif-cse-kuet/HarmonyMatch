@@ -10,4 +10,5 @@
     height: fit-content;
     min-height: 70vh;
     box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+    background-color: rgba(44, 106, 83, 0.34);
 }

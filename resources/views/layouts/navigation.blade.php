@@ -95,4 +95,27 @@
             </div>
         </div>
     </div>
+
+
+    <div class="flex justify-center">
+        @if (Auth::user())
+        @php
+        $incompleteProfile = false;
+        $nullableFields = ['father_name', 'mother_name','contact','siblings'];
+        @endphp
+
+        @foreach($nullableFields as $field)
+        @if(Auth::user()->$field === null)
+        @php
+        $incompleteProfile = true;
+        break;
+        @endphp
+        @endif
+        @endforeach
+
+        @if($incompleteProfile)
+        <p class="profile-item" style="color:red;">Your Profile is incomplete!</p>
+        @endif
+        @endif
+    </div>
 </nav>
